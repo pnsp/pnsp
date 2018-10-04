@@ -68,7 +68,7 @@ public class PinyinTool {
 	
 	public static void main(String[] args) throws BadHanyuPinyinOutputFormatCombination {
 		PinyinTool tool = new PinyinTool();
-		System.err.println("黎志勇 ===== " + tool.toPinYin("韡","",Type.LOWERCASE));
+		System.err.println("黎志勇 ===== " + tool.toPinYin("啊啊啊啊","",Type.LOWERCASE));
 	}
 	
 }
