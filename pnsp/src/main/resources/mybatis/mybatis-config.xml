@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 是否开启缓存 -->
+		<setting name="cacheEnabled" value="false" />
+		<!-- 表字段下划线映射成驼峰的形式 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+		<!-- 插入数据时生成id -->
+		<setting name="useGeneratedKeys" value="false" />
+		<!-- 为缓存提高性能 -->
+		<setting name="defaultExecutorType" value="REUSE" />
+		<!-- 事务操作时间,超时关闭事务 -->
+		<setting name="defaultStatementTimeout" value="600" />
+	</settings>
+
+	<!-- 为包名设置别名 -->
+	<typeAliases>
+		<typeAlias type="com.iexiao.pnsp.user.bean.PnspUserT" alias="PnspUserT" />
+		<typeAlias type="com.iexiao.pnsp.user.query.PnspUserTQuery" alias="PnspUserTQuery" />
+		<typeAlias type="com.iexiao.pnsp.base.bean.PnspImageT" alias="PnspImageT" />
+		<typeAlias type="com.iexiao.pnsp.base.query.PnspImageTQuery" alias="PnspImageTQuery" />
+	</typeAliases>
+
+	<!-- mapper文件路径 -->
+	<!-- <mappers> <mapper resource="com/iexiao/pnsp/user/dao/PnspUserTDao.xml"/> 
+		</mappers> -->
+</configuration>
