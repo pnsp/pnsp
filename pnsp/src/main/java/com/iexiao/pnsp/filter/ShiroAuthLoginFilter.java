@@ -19,7 +19,6 @@ import com.iexiao.pnsp.utils.RestResponse;
  * @author lizhiyong
  * @date 2018年7月24日
  */
-@Component
 public class ShiroAuthLoginFilter extends FormAuthenticationFilter{
 
 	@Override

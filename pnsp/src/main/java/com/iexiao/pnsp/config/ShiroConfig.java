@@ -25,7 +25,7 @@ import com.iexiao.pnsp.utils.shiro.CustomRealm;
 public class ShiroConfig {
 	
 	@Bean
-	@Order(Integer.MAX_VALUE - 2)
+	@Order(Integer.MAX_VALUE - 1)
 	public FilterRegistrationBean headerFilter(ResponseHeaderFilter responseHeaderFilter) {
 		FilterRegistrationBean registration = new FilterRegistrationBean();
 		registration.setFilter(responseHeaderFilter);
@@ -34,10 +34,14 @@ public class ShiroConfig {
 	}
 	
 	@Bean
-	@Order(Integer.MAX_VALUE - 1)
+	public ResponseHeaderFilter responseHeaderFilter() {
+		return new ResponseHeaderFilter();
+	}
+	
+	@Bean
+	@Order(Integer.MAX_VALUE - 2)
     public ShiroFilterFactoryBean shiroFilter(DefaultWebSecurityManager defaultSecurityManager,
-    		ShiroAuthLoginFilter shiroAuthLoginFilter,
-    		ShiroFuncFilter shiroFuncFilter) {
+    		ShiroAuthLoginFilter shiroAuthLoginFilter,ShiroFuncFilter shiroFuncFilter) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         // 必须设置 SecurityManager
         shiroFilterFactoryBean.setSecurityManager(defaultSecurityManager);
@@ -54,6 +58,16 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         return shiroFilterFactoryBean;
     }
+	
+	@Bean
+	public ShiroAuthLoginFilter shiroAuthLoginFilter() {
+		return new ShiroAuthLoginFilter();
+	}
+	
+	@Bean
+	public ShiroFuncFilter shiroFuncFilter() {
+		return new ShiroFuncFilter();
+	}
 	
 	@Bean
     public DefaultWebSecurityManager securityManager(CustomRealm customRealm,
