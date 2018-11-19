@@ -13,7 +13,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
  */
 public class PinyinTool {
 	
-	HanyuPinyinOutputFormat format = null;
+	static HanyuPinyinOutputFormat format = null;
 	
 	public static enum Type{
 		UPPERCASE,			//大写
@@ -27,15 +27,15 @@ public class PinyinTool {
 		format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
 	}
 	
-	public String toPinYin(String str) throws BadHanyuPinyinOutputFormatCombination{
+	public static String toPinYin(String str) throws BadHanyuPinyinOutputFormatCombination{
 		return toPinYin(str,"",Type.UPPERCASE);
 	}
 	
-	public String toPinYin(String str, String spera) throws BadHanyuPinyinOutputFormatCombination{
+	public static String toPinYin(String str, String spera) throws BadHanyuPinyinOutputFormatCombination{
 		return toPinYin(str, spera, Type.UPPERCASE);
 	}
 	
-	public String toPinYin(String str, String spera, Type type) throws BadHanyuPinyinOutputFormatCombination {
+	public static String toPinYin(String str, String spera, Type type) throws BadHanyuPinyinOutputFormatCombination {
 		if(null == str || str.trim().length() == 0) {
 			return "";
 		}
@@ -64,11 +64,6 @@ public class PinyinTool {
 			}
 		}
 		return py.trim();
-	}
-	
-	public static void main(String[] args) throws BadHanyuPinyinOutputFormatCombination {
-		PinyinTool tool = new PinyinTool();
-		System.err.println("黎志勇 ===== " + tool.toPinYin("啊啊啊啊","",Type.LOWERCASE));
 	}
 	
 }

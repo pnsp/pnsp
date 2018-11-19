@@ -12,6 +12,7 @@
 		<result column="age" property="age" />
 		<result column="password" property="password" />
 		<result column="eff_status" property="effStatus" />
+		<result column="role_id" property="roleId" />
 		<result column="add_oprid" property="addOprid" />
 		<result column="add_dttm" property="addDttm" />
 		<result column="upd_oprid" property="updOprid" />
@@ -19,7 +20,7 @@
 	</resultMap>
 
 	<sql id="base_column_list">
-		id,last_name,phone,id_card,email,sex,age,password,eff_status,
+		id,last_name,phone,id_card,email,sex,age,password,eff_status,role_id,
 		add_oprid,add_dttm,upd_oprid,upd_dttm
 	</sql>
 
@@ -51,7 +52,8 @@
 	<insert id="register" parameterType="PnspUserTQuery">
 		insert into pnsp_user_t
 		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<include refid="base_column_list" />
+			id,last_name,phone,id_card,email,sex,age,password,eff_status,role_id,
+			add_oprid,add_dttm,upd_oprid,upd_dttm
 		</trim>
 		<trim prefix="values(" suffix=")" suffixOverrides=",">
 			#{id},
@@ -101,6 +103,12 @@
 				#{effStatus},
 			</if>
 			<if test="effStatus == null">
+				NULL,
+			</if>
+			<if test="roleId != null">
+				#{roleId},
+			</if>
+			<if test="roleId == null">
 				NULL,
 			</if>
 

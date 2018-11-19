@@ -2,13 +2,14 @@ package com.iexiao.pnsp.base;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.logging.Logger;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.context.request.RequestAttributes;
@@ -20,7 +21,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  * @author lizhiyong
  */
 public class BaseController {
-	protected Logger logger = Logger.getLogger(this.getClass().getName());
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
 	
 	private static ThreadLocal<HttpServletRequest> currentRequest = new ThreadLocal<HttpServletRequest>();
 	private static ThreadLocal<HttpServletResponse> currentResponse = new ThreadLocal<HttpServletResponse>();
@@ -112,7 +114,7 @@ public class BaseController {
 			//设置cookie编码
 			encodeValue = URLEncoder.encode(value,"UTF-8");
 		} catch (UnsupportedEncodingException e) {
-			logger.info("编码转换错误，cookie失败");
+			LOGGER.info("[编码转换错误，cookie失败]");
 			e.printStackTrace();
 		}
 		if(null != encodeValue) {

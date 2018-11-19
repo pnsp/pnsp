@@ -3,6 +3,7 @@ package com.iexiao.pnsp.utils.shiro;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -11,12 +12,13 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import com.iexiao.pnsp.base.constants.UserConstant;
+import com.iexiao.pnsp.constants.Constant;
+import com.iexiao.pnsp.constants.UserConstant;
 import com.iexiao.pnsp.user.query.PnspUserTQuery;
 import com.iexiao.pnsp.user.service.PnspUserTService;
 
@@ -42,16 +44,17 @@ public class CustomRealm extends AuthorizingRealm {
 	@SuppressWarnings("unchecked")
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-		Set<String> roles = (Set<String>) ShiroUtil.getSession(UserConstant.ROLES_SESSION);
+		Subject subject = SecurityUtils.getSubject();
+		Set<String> roles = (Set<String>) ShiroUtil.getSession(UserConstant.ROLES_SESSION,subject);
 		SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-		LOGGER.info("roles ==================== " + ((null == roles) ? null : roles.size()));
+		LOGGER.info("roles size：" + ((null == roles) ? null : roles.size()));
 		if(null != roles && !roles.isEmpty()) {
 			//若还有redis存储缓存，则此处取权限缓存可先本地再redis再数据库
-			Set<String> permissions = (Set<String>) ShiroUtil.getSession(UserConstant.PERMISSIONS_SESSION);
+			Set<String> permissions = (Set<String>) ShiroUtil.getSession(UserConstant.PERMISSIONS_SESSION,subject);
 			if(null == permissions || permissions.isEmpty()) {
 				permissions = getPermissionsByRoles(roles);
-				LOGGER.info("permissions ==================== " + ((null == permissions) ? null : permissions.size()));
-				ShiroUtil.setSession(UserConstant.PERMISSIONS_SESSION, permissions, 60 * 60 * 24);
+				LOGGER.info("permissions size：" + ((null == permissions) ? null : permissions.size()));
+				ShiroUtil.setSession(UserConstant.PERMISSIONS_SESSION, permissions, Constant.CACHE_SESSION_CYCLE,subject);
 			}
 			simpleAuthorizationInfo.addStringPermissions(permissions);
 		}

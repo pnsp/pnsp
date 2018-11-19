@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iexiao.pnsp.base.dao.PnspTaskCronTDao">
+
+	<resultMap id="pnspTaskCronTQuery" type="com.iexiao.pnsp.base.query.PnspTaskCronTQuery">
+		<result column="id" property="id" />
+		<result column="task_name" property="taskName" />
+		<result column="cron" property="cron" />
+		<result column="effdt" property="effdt" />
+		<result column="eff_status" property="effStatus" />
+		<result column="add_oprid" property="addOprid" />
+		<result column="add_dttm" property="addDttm" />
+		<result column="upd_oprid" property="updOprid" />
+		<result column="upd_dttm" property="updDttm" />
+	</resultMap>
+
+	<sql id="base_column_list">
+		id,task_name,cron,effdt,eff_status,add_oprid,add_dttm,upd_oprid,upd_dttm
+	</sql>
+
+	<select id="getAllTaskList" resultMap="pnspTaskCronTQuery">
+		select 
+			ptct.task_name,ptct.cron
+		from 
+			pnsp_task_cron_t ptct
+		where 
+			ptct.eff_status = '1'
+			and ptct.effdt = (
+				select max(effdt) 
+				from pnsp_task_cron_t 
+				where task_name = ptct.task_name
+				and effdt <![CDATA[ <= ]]> current_date
+			)
+	</select>
+
+</mapper>

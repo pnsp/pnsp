@@ -1,4 +1,4 @@
-package com.iexiao.pnsp.base.constants;
+package com.iexiao.pnsp.constants;
 
 public class UserConstant {
 	
@@ -18,11 +18,17 @@ public class UserConstant {
 	
 	public static final String AUTH_CODE = "authCode";
 	
+	/** User code******************************************************************************/
+	//系统操作人
+	public static final String USER_SYSTEM_OPRID = "88888888888";
+	//用户状态 - 正常
+	public static final String USER_EFF_STATUS_YES = "1";
+	//用户状态 - 失效
+	public static final String USER_EFF_STATUS_NO = "0";
+	
 	/** 角色编码******************************************************************************/
-	//默认角色
-	public static final String DEFAULT_ROLE = "R001";
-	//普通用户
-	public static final String ROLE_ID_ORDINARY = "R001";
+	//默认角色:普通用户
+	public static final String ROLE_ID_DEFAULT = "R001";
 	//超级管理员
 	public static final String ROLE_ID_SUPER = "R008";
 	

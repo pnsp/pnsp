@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.iexiao.pnsp.base.constants.UserConstant;
+import com.iexiao.pnsp.constants.UserConstant;
 
 /**
  * 生成类 数字文字图片验证码
@@ -33,7 +33,7 @@ public class AuthCode {
    * @param random random 随机数
    * @return Font 返回一个新字体
    */
-  private synchronized Font getsFont(Random random) {
+  private static synchronized Font getsFont(Random random) {
     return new Font("Fixedsys", Font.CENTER_BASELINE, 18);
   }
 
@@ -45,7 +45,7 @@ public class AuthCode {
    * @param random random 随机数
    * @return Color 返回一个新颜色
    */
-  synchronized Color getRandColor(int fc, int bc, Random random) {
+  static synchronized Color getRandColor(int fc, int bc, Random random) {
     if (fc > 255)
       fc = 255;
     if (bc > 255)
@@ -59,11 +59,11 @@ public class AuthCode {
   /**
    * 生成随机数图片
    */
-  public synchronized void getRandcode(HttpServletRequest request,
+  public static synchronized void getRandcode(HttpServletRequest request,
                                        HttpServletResponse response){
     System.setProperty("java.awt.headless", "true");
     HttpSession session = request.getSession();
-    LOGGER.info("authCode sessionId ====================== " + session.getId());
+    LOGGER.info("authCode sessionId：" + session.getId());
     int width = 88, height = 38;// 设置图片大小
     BufferedImage image = new BufferedImage(width, height,
             BufferedImage.TYPE_INT_RGB);
@@ -109,11 +109,11 @@ public class AuthCode {
     try {
 		ImageIO.write(image, "JPEG", response.getOutputStream());
 	} catch (IOException e) {
-		LOGGER.error("authCode ImageIO.write =================== IOException",e);
+		LOGGER.error("com.iexiao.pnsp.utils.AuthCode.getRandcode => IOException from ImageIO.write",e);
 	}
   }
 
-  public synchronized String getRandomString(int num) {
+  public static synchronized String getRandomString(int num) {
 	//纯数字
     String randnumber = "0123456789";
 	return String.valueOf(randnumber.charAt(num));

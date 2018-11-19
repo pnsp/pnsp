@@ -15,7 +15,11 @@ public class Exception2CodeRepo {
 	        .put(UserException.Type.USER_NOT_LOGIN,RestCode.NOLOGIN)
 	        .put(UserException.Type.USER_AUTH_FAIL,RestCode.CHECK_ERROR)
 	        .put(UserException.Type.SESSION_INVALID,RestCode.CHECK_ERROR)
+	        .put(MybatisException.Type.RESULT_COUNT_MORE,RestCode.MYBATIS_ERROR)
+	        .put(CommonException.Type.COMMON_ERROR,RestCode.COMMON_ERROR)
 	        .build();
+	
+
 	
 	private static Object getType(Throwable throwable){
 	   try {

@@ -13,6 +13,6 @@ public interface PnspImageTService {
 	 * @param query
 	 * @return
 	 */
-	List<PnspImageTQuery> getImageListByGroupId(PnspImageTQuery query);
+	public List<PnspImageTQuery> getImageListByGroupId(PnspImageTQuery query);
 
 }

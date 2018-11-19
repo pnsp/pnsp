@@ -1,12 +1,9 @@
 package com.iexiao.pnsp.utils.shiro;
 
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.iexiao.pnsp.exception.GlobalExceptionHandler;
 
 public final class ShiroUtil {
 	
@@ -19,14 +16,13 @@ public final class ShiroUtil {
 	 * @param key
 	 * @param value
 	 */
-	public static void setSession(String key,Object value) {
-		Subject subject = SecurityUtils.getSubject();
+	public static void setSession(String key,Object value,Subject subject) {
 		if(null == subject) {
 			return;
 		}
 		Session session = subject.getSession(true);
-		LOGGER.info("shiro sessionId =================" + session.getId());
 		if(null != session) {
+//			LOGGER.info("shiro sessionId：" + session.getId());
 			session.setAttribute(key, value);
 		}
 	}
@@ -37,17 +33,16 @@ public final class ShiroUtil {
 	 * @date 2018年7月20日
 	 * @param key
 	 * @param value
-	 * @param second
+	 * @param ms
 	 */
-	public static void setSession(String key,Object value, int second) {
-		Subject subject = SecurityUtils.getSubject();
+	public static void setSession(String key,Object value, int ms,Subject subject) {
 		if(null == subject) {
 			return;
 		}
 		Session session = subject.getSession(true);
-		LOGGER.info("shiro sessionId =================" + session.getId());
 		if(null != session) {
-			session.setTimeout(second);
+//			LOGGER.info("shiro sessionId：" + session.getId());
+			session.setTimeout(ms);
 			session.setAttribute(key, value);
 		}
 	}
@@ -59,14 +54,13 @@ public final class ShiroUtil {
 	 * @param key
 	 * @return
 	 */
-	public static Object getSession(String key) {
-		Subject subject = SecurityUtils.getSubject();
+	public static Object getSession(String key,Subject subject) {
 		if(null == subject) {
 			return null;
 		}
 		Session session = subject.getSession(false);
-		LOGGER.info("shiro sessionId =================" + session.getId());
 		if(null != session) {
+//			LOGGER.info("shiro sessionId：" + session.getId());
 			return session.getAttribute(key);
 		}
 		return null;
@@ -78,14 +72,13 @@ public final class ShiroUtil {
 	 * @date 2018年7月23日
 	 * @param key
 	 */
-	public static void removeSession(String key) {
-		Subject subject = SecurityUtils.getSubject();
+	public static void removeSession(String key,Subject subject) {
 		if(null == subject) {
 			return;
 		}
 		Session session = subject.getSession(false);
-		LOGGER.info("shiro sessionId =================" + session.getId());
 		if(null != session) {
+//			LOGGER.info("shiro sessionId：" + session.getId());
 			session.removeAttribute(key);
 		}
 	}

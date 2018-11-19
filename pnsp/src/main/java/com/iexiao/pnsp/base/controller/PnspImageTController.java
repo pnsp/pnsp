@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.iexiao.pnsp.annotation.OpLog;
 import com.iexiao.pnsp.base.BaseController;
 import com.iexiao.pnsp.base.dto.PnspImageTDTO;
 import com.iexiao.pnsp.base.query.PnspImageTQuery;
@@ -33,9 +34,11 @@ public class PnspImageTController extends BaseController{
 	 * @param dto
 	 * @return
 	 */
+	@OpLog(opType = OpLog.QUERY, opDescr = "getImageListByGroupId", keyWord = "getImageListByGroupId")
 	@RequestMapping("/getImageListByGroupId.do")
 	@ResponseBody
 	public RestResponse<Object> getImageListByGroupId(@RequestBody PnspImageTDTO dto){
+		LOGGER.info("[/getImageListByGroupId.do]");
 		PnspImageTQuery query = new PnspImageTQuery();
 		BeanUtils.copyProperties(dto,query);
 		List<PnspImageTQuery> selectListByPage = this.pnspImageTService.getImageListByGroupId(query);

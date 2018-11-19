@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iexiao.pnsp.base.dao.PnspOpLogTDao">
+
+	<resultMap id="pnspOpLogTQuery" type="com.iexiao.pnsp.base.query.PnspOpLogTQuery">
+		<result column="id" property="id" />
+		<result column="phone" property="phone" />
+		<result column="req_url" property="reqUrl" />
+		<result column="op_content" property="opContent" />
+		<result column="op_type" property="opType" />
+		<result column="op_descr" property="opDescr" />
+		<result column="op_status" property="opStatus" />
+		<result column="op_ip" property="opIp" />
+		<result column="op_mac" property="opMac" />
+		<result column="op_dttm" property="opDttm" />
+		<result column="key_word" property="keyWord" />
+		<result column="add_oprid" property="addOprid" />
+		<result column="add_dttm" property="addDttm" />
+		<result column="upd_oprid" property="updOprid" />
+		<result column="upd_dttm" property="updDttm" />
+	</resultMap>
+
+	<sql id="base_column_list">
+		id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word,
+		add_oprid,add_dttm,upd_oprid,upd_dttm
+	</sql>
+	
+	<insert id="addOpLog" parameterType="PnspOpLogTQuery">
+		insert into pnsp_op_log_t
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word,
+			add_oprid,add_dttm,upd_oprid,upd_dttm
+		</trim>
+		<trim prefix="values(" suffix=")" suffixOverrides=",">
+			#{id},
+			<if test="phone != null">
+				#{phone},
+			</if>
+			<if test="phone == null">
+				NULL,
+			</if>
+			<if test="reqUrl != null">
+				#{reqUrl},
+			</if>
+			<if test="reqUrl == null">
+				NULL,
+			</if>
+			<if test="opContent != null">
+				#{opContent},
+			</if>
+			<if test="opContent == null">
+				NULL,
+			</if>
+			<if test="opType != null">
+				#{opType},
+			</if>
+			<if test="opType == null">
+				NULL,
+			</if>
+			<if test="opDescr != null">
+				#{opDescr},
+			</if>
+			<if test="opDescr == null">
+				NULL,
+			</if>
+			<if test="opStatus != null">
+				#{opStatus},
+			</if>
+			<if test="opStatus == null">
+				NULL,
+			</if>
+			<if test="opIp != null">
+				#{opIp},
+			</if>
+			<if test="opIp == null">
+				NULL,
+			</if>
+			<if test="opMac != null">
+				#{opMac},
+			</if>
+			<if test="opMac == null">
+				NULL,
+			</if>
+			<if test="opDttm != null">
+				#{opDttm},
+			</if>
+			<if test="opDttm == null">
+				NULL,
+			</if>
+			<if test="keyWord != null">
+				#{keyWord},
+			</if>
+			<if test="keyWord == null">
+				NULL,
+			</if>
+
+			<if test="addOprid != null">
+				#{addOprid},
+			</if>
+			<if test="addOprid == null">
+				NULL,
+			</if>
+			<if test="addDttm != null">
+				#{addDttm},
+			</if>
+			<if test="addDttm == null">
+				NULL,
+			</if>
+			<if test="updOprid != null">
+				#{updOprid},
+			</if>
+			<if test="updOprid == null">
+				NULL,
+			</if>
+			<if test="updDttm != null">
+				#{updDttm},
+			</if>
+			<if test="updDttm == null">
+				NULL,
+			</if>
+		</trim>
+	</insert>
+
+</mapper>

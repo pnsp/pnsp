@@ -7,7 +7,6 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.iexiao.pnsp.annotation.OpLog;
 import com.iexiao.pnsp.base.BaseController;
-import com.iexiao.pnsp.base.constants.UserConstant;
+import com.iexiao.pnsp.constants.Constant;
+import com.iexiao.pnsp.constants.UserConstant;
 import com.iexiao.pnsp.exception.UserException;
 import com.iexiao.pnsp.user.dto.PnspUserTDTO;
 import com.iexiao.pnsp.user.query.PnspUserTQuery;
@@ -64,9 +65,11 @@ public class PnspUserTController extends BaseController{
 	 * @param request
 	 * @param response
 	 */
+	@OpLog(opType = OpLog.QUERY, opDescr = "getAuthCode", keyWord = "getAuthCode")
 	@RequestMapping("/getAuthCode")
 	@ResponseBody
 	public void getAuthCode(HttpServletRequest request, HttpServletResponse response){
+		LOGGER.info("[/getAuthCode]");
 		response.setContentType("image/jpeg");
 	    response.setHeader("Pragma", "No-cache");
 	    response.setHeader("Cache-Control", "no-cache");
@@ -81,9 +84,11 @@ public class PnspUserTController extends BaseController{
 	 * @param dto
 	 * @return
 	 */
+	@OpLog(opType = OpLog.UPDATE, opDescr = "register", keyWord = "register")
 	@RequestMapping("/register")
 	@ResponseBody
 	public RestResponse<Object> register(@RequestBody PnspUserTDTO dto){
+		LOGGER.info("[/register]");
 		if(StringUtils.isBlank(dto.getPhone())) {
 			throw new UserException(UserException.Type.USER_AUTH_FAIL, UserConstant.PHONE_NOT_NULL);
 		}else if(StringUtils.isBlank(dto.getPassword())) {
@@ -102,9 +107,11 @@ public class PnspUserTController extends BaseController{
 	 * @param dto
 	 * @return
 	 */
+	@OpLog(opType = OpLog.QUERY, opDescr = "login", keyWord = "login")
 	@RequestMapping("/login")
 	@ResponseBody
 	public RestResponse<Object> login(@RequestBody PnspUserTDTO dto){
+		LOGGER.info("[/login]");
 		HttpServletRequest request = getRequest();
 		HttpSession session = request.getSession();
 		if(StringUtils.isBlank(dto.getPhone())) {
@@ -126,24 +133,24 @@ public class PnspUserTController extends BaseController{
 		PnspUserTQuery query = new PnspUserTQuery();
 		BeanUtils.copyProperties(dto,query);
 		Subject subject = SecurityUtils.getSubject();
-		LOGGER.info("UsernamePasswordToken ======================= start");
+		LOGGER.info("[UsernamePasswordToken start]");
 		UsernamePasswordToken token = new UsernamePasswordToken(query.getPhone(), 
 				HashUtil.encryPasswd(query.getPassword()));
-		LOGGER.info("UsernamePasswordToken ======================= end");
+		LOGGER.info("[UsernamePasswordToken end]");
 		subject.login(token);
 		//开启线程去储存ip和mac到session
 		new Thread() {
 			public void run() {
 				String ipAddress = GetMacAddrAndIpUtil.getIpAddress((HttpServletRequest) request);
-				LOGGER.info("login ipAddress ================== " + ipAddress);
+				LOGGER.info("login ipAddress：" + ipAddress);
 				if(null != ipAddress && ipAddress.length() > 0) {
 					String macAddress = GetMacAddrAndIpUtil.getMacAddress(ipAddress);
-					ShiroUtil.setSession(UserConstant.IP_SESSION, ipAddress, 60 * 60 * 24 * 1000);
-					ShiroUtil.setSession(UserConstant.MAC_SESSION, macAddress, 60 * 60 * 24 * 1000);
+					ShiroUtil.setSession(UserConstant.IP_SESSION, ipAddress, Constant.CACHE_SESSION_CYCLE,subject);
+					ShiroUtil.setSession(UserConstant.MAC_SESSION, macAddress, Constant.CACHE_SESSION_CYCLE,subject);
 				}
 			}
 		}.start();
-		ShiroUtil.setSession(UserConstant.USER_SESSION, query.getPhone(), 60 * 60 * 24 * 1000);
+		ShiroUtil.setSession(UserConstant.USER_SESSION, query.getPhone(), Constant.CACHE_SESSION_CYCLE,subject);
 		return RestResponse.success();
 	}
 	
@@ -153,16 +160,18 @@ public class PnspUserTController extends BaseController{
 	 * @date 2018年7月23日
 	 * @param dto
 	 */
+	@OpLog(opType = OpLog.QUERY, opDescr = "logout", keyWord = "logout")
 	@RequestMapping("/logout.do")
 	@ResponseBody
 	public RestResponse<Object> logout(){
-		DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
-		SecurityUtils.setSecurityManager(defaultSecurityManager);
+		LOGGER.info("[/logout.do]");
+		//DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
+		//SecurityUtils.setSecurityManager(defaultSecurityManager);
 		Subject subject = SecurityUtils.getSubject();
-		ShiroUtil.removeSession(UserConstant.ROLES_SESSION);
-		ShiroUtil.removeSession(UserConstant.USER_SESSION);
-		ShiroUtil.removeSession(UserConstant.MAC_SESSION);
-		ShiroUtil.removeSession(UserConstant.IP_SESSION);
+		ShiroUtil.removeSession(UserConstant.ROLES_SESSION,subject);
+		ShiroUtil.removeSession(UserConstant.USER_SESSION,subject);
+		ShiroUtil.removeSession(UserConstant.MAC_SESSION,subject);
+		ShiroUtil.removeSession(UserConstant.IP_SESSION,subject);
 		subject.logout();
 		return RestResponse.success();
 	}

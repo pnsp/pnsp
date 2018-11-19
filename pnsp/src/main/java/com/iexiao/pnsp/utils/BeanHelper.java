@@ -8,6 +8,8 @@ import java.util.UUID;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.PropertyUtils;
 
+import com.iexiao.pnsp.constants.Constant;
+
 public class BeanHelper {
  
   private static final String updateTimeKey  = "updDttm";
@@ -48,20 +50,6 @@ public class BeanHelper {
     }
   }
   
-  /**
-   * 更新填充时间
-   * @author lizhiyong
-   * @date 2018年9月9日
-   * @param target
-   */
-  public static <T> void onUpdate(T target){
-    try {
-      PropertyUtils.setProperty(target, updateTimeKey, System.currentTimeMillis());
-    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-      return;
-    }
-  }
-  
   private static <T> void innerDefault(T target, Class<?> clazz, PropertyDescriptor[] descriptors) {
 	    for (PropertyDescriptor propertyDescriptor : descriptors) {
 	      String fieldName = propertyDescriptor.getName();
@@ -94,37 +82,52 @@ public class BeanHelper {
 	  }
   
   /**
-   * 新增填充时间
+   * 新增操作填充时间
    * @author lizhiyong
    * @date 2018年9月9日
    * @param target
    */
   public static <T> void onInsert(T target){
+	Date date = getDate(target);
+    try {
+      PropertyUtils.setProperty(target, createTimeKey, date);
+    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+      return;
+    }
+  }
+  
+  /**
+   * 更新操作填充时间
+   * @author lizhiyong
+   * @date 2018年9月9日
+   * @param target
+   */
+  public static <T> void onUpdate(T target){
+    Date date = getDate(target);
+    try {
+      PropertyUtils.setProperty(target, updateTimeKey, date);
+    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+      return;
+    }
+  }
+  
+  private static <T> Date getDate(T target) {
 	Class<?> clazz = target.getClass();
 	PropertyDescriptor[] descriptors = PropertyUtils.getPropertyDescriptors(clazz);
 	innerDefault(target, clazz, descriptors);
     long time = System.currentTimeMillis();
     Date date = new Date(time);
-    try {
-      PropertyUtils.setProperty(target, updateTimeKey, date);
-    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-      
-    }
-    try {
-      PropertyUtils.setProperty(target, createTimeKey, date);
-    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-      
-    }
+    return date;
   }
-  
-  /**
+
+/**
    * 主键uuid
    * @author lizhiyong
    * @date 2018年9月9日
    * @param target
    */
   public static <T> void setUUID(T target) {
-	  String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+	  String uuid = UUID.randomUUID().toString().replaceAll("-", Constant.NULL_STR);
 	  try {
 	      PropertyUtils.setProperty(target, "id", uuid);
 	    } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {

@@ -11,7 +11,9 @@ public enum RestCode {
 	EXITLOGIN("10006","已登录"),
 	BUZY("10007","请求繁忙"),
 	SESSION_ERROR("10008","session错误"),
-	PERMISSION_ERROR("10009","权限不足");
+	PERMISSION_ERROR("10009","权限不足"),
+	MYBATIS_ERROR("10010","mybatis执行异常"),
+	COMMON_ERROR("99999","自定义异常");
 	
 	private String code;
 	

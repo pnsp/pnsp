@@ -1,0 +1,949 @@
+2018-10-24 09:39:26.394[INFO ]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 09:39:26.595[INFO ]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 75 msec}
+2018-10-24 09:39:29.329[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 09:39:29.337[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 09:39:29.337[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 09:39:29.338[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 09:39:29.361[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task method name：testTaskRun
+2018-10-24 09:39:29.365[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:39:30.001[INFO ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:39:30.001[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:39:35.001[INFO ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:39:35.002[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:39:40.001[INFO ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:39:40.003[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:39:45.002[INFO ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:39:45.003[INFO ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:41:39.885[INFO ][Druid-ConnectionPool-Create-404586280]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 09:41:40.005[INFO ][main                 ]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 81 msec}
+2018-10-24 09:41:41.498[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 09:41:41.504[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 09:41:41.505[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 09:41:41.505[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 09:41:41.511[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task method name：testTaskRun
+2018-10-24 09:41:41.516[INFO ][main                 ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:41:45.001[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:41:45.002[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:41:50.002[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:41:50.003[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:41:55.001[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:41:55.002[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:00.001[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:00.003[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:05.002[INFO ][pool-2-thread-3      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:05.003[INFO ][pool-2-thread-3      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:10.001[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:10.002[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:15.002[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:15.003[INFO ][pool-2-thread-2      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:20.001[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:20.002[INFO ][pool-2-thread-1      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:25.002[INFO ][pool-2-thread-5      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:25.003[INFO ][pool-2-thread-5      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:42:30.001[INFO ][pool-2-thread-3      ]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:42:30.002[INFO ][pool-2-thread-3      ]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:45:42.866[INFO][Druid-ConnectionPool-Create-54134077]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 09:45:42.905[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 4 msec}
+2018-10-24 09:45:44.277[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 09:45:44.283[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 09:45:44.284[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 09:45:44.284[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 09:45:44.289[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task method name：testTaskRun
+2018-10-24 09:45:44.295[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:45:45.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:45:45.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:45:50.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:45:50.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 09:45:55.002[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 09:45:55.004[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:31.580[INFO][Druid-ConnectionPool-Create-639105046]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 12:57:31.699[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 51 msec}
+2018-10-24 12:57:33.180[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 12:57:33.187[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 12:57:33.187[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 12:57:33.187[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 12:57:33.193[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task method name：testTaskRun
+2018-10-24 12:57:33.198[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:35.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:57:35.001[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:40.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:57:40.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:45.001[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:57:45.002[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:50.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:57:50.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:53.716[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 12:57:53.768[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 12:57:53.839[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：ac18a017-7be6-4a39-81c8-24c30d4d932b -> 451bdeba182245d4b872905d3407622e
+2018-10-24 12:57:55.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:57:55.001[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:57:57.780[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 12:57:57.785[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 12:57:59.811[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f47031d1-796f-4f51-9d54-82f4e623bf64 -> 043cc4657d12436bbcf564ce3fd958ca
+2018-10-24 12:58:00.013[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:58:00.013[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:58:00.363[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c368812ff6aa4ba7af26bb23c67086fc', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 12:57:59.887', 'getAuthCode', '88888888888', '10/24/2018 12:57:59.887', '88888888888', 
+'10/24/2018 12:57:59.887' ) 
+ {executed in 173 msec}
+2018-10-24 12:58:00.435[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '0cbdf2c2d2984255b2d883bf394b2ce5', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 12:57:59.977', 'getAuthCode', '88888888888', '10/24/2018 12:57:59.976', '88888888888', 
+'10/24/2018 12:57:59.976' ) 
+ {executed in 2 msec}
+2018-10-24 12:58:05.000[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 12:58:05.001[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 12:58:24.130[INFO][Druid-ConnectionPool-Create-422134367]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 3 msec}
+2018-10-24 12:58:24.219[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 44 msec}
+2018-10-24 12:58:25.702[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 12:58:25.707[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 12:58:25.707[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 12:58:25.707[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 12:58:31.605[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 12:58:31.647[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 12:58:31.694[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：23840300-6ab7-472a-a5b3-2f608af0346b -> 5f24f32663634c1aa9652f271bd73663
+2018-10-24 12:58:32.098[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 12:58:32.216[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'ba1a67f477424408ab24efb0e4bb88cf', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 12:58:32.031', 'getAuthCode', '88888888888', '10/24/2018 12:58:32.030', '88888888888', 
+'10/24/2018 12:58:32.030' ) 
+ {executed in 52 msec}
+2018-10-24 13:07:11.760[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 3 msec}
+2018-10-24 13:07:11.831[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 30 msec}
+2018-10-24 13:07:13.297[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 13:07:13.303[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 13:07:13.303[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 13:07:13.304[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 13:07:17.428[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 13:07:17.466[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 13:07:17.520[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：9ed4c9f7-5fa1-4d72-9bdc-c10560793c2f -> b685f96aa6444607a1b8cd2f81e50dfc
+2018-10-24 13:07:17.932[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 13:07:18.011[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'cbeec020651643628e196bc3f7a4eb2b', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 13:07:17.898', 'getAuthCode', '88888888888', '10/24/2018 13:07:17.897', '88888888888', 
+'10/24/2018 13:07:17.898' ) 
+ {executed in 22 msec}
+2018-10-24 15:01:46.364[INFO][Druid-ConnectionPool-Create-732189840]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 3 msec}
+2018-10-24 15:01:46.685[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 191 msec}
+2018-10-24 15:01:48.256[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 15:01:48.261[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 15:01:48.262[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 15:01:48.262[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 15:01:48.268[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task method name：testTaskRun
+2018-10-24 15:01:48.274[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:01:50.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:01:50.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:01:55.001[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:01:55.002[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:00.000[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:00.000[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:05.003[INFO][pool-2-thread-1]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:05.004[INFO][pool-2-thread-1]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:10.001[INFO][pool-2-thread-3]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:10.002[INFO][pool-2-thread-3]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:15.000[INFO][pool-2-thread-2]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:15.001[INFO][pool-2-thread-2]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:20.002[INFO][pool-2-thread-4]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:20.003[INFO][pool-2-thread-4]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:20.690[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:02:20.727[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:02:20.847[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：27112fad-4b86-4427-bc04-4c88b4f3cb30 -> 3a8f9fa41a2d4ae8be21435a06815501
+2018-10-24 15:02:21.602[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '1097ef887cbb450885c33357c62774f7', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:02:21.459', 'getAuthCode', '88888888888', '10/24/2018 15:02:21.458', '88888888888', 
+'10/24/2018 15:02:21.458' ) 
+ {executed in 5 msec}
+2018-10-24 15:02:25.000[INFO][pool-2-thread-4]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:25.001[INFO][pool-2-thread-4]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:02:30.001[INFO][pool-2-thread-5]com.iexiao.pnsp.base.serviceImpl.TaskItem.testTaskRun: [Springtask running...]
+2018-10-24 15:02:30.002[INFO][pool-2-thread-5]com.iexiao.pnsp.config.SpringTaskConfig.nextExecutionTime: task cron：0/5 * * * * *
+2018-10-24 15:03:28.410[INFO][Druid-ConnectionPool-Create-1592763413]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 1 msec}
+2018-10-24 15:03:28.462[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 13 msec}
+2018-10-24 15:03:30.096[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 15:03:30.101[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 15:03:30.102[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 15:03:30.102[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 15:03:41.360[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:41.394[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:41.446[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 64500e2cf44b4ef18cb2a935b03cf5b6
+2018-10-24 15:03:41.789[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:41.872[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '627812fdce93406598d625314d781c6a', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:41.751', 'getAuthCode', '88888888888', '10/24/2018 15:03:41.750', '88888888888', 
+'10/24/2018 15:03:41.750' ) 
+ {executed in 12 msec}
+2018-10-24 15:03:53.513[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:53.521[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:53.523[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 75cc686ccc4147e6a34cb6dbbbf12b12
+2018-10-24 15:03:53.571[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:53.607[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '0d7beb9f04484d2fa04bf30191b514d5', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:53.553', 'getAuthCode', '88888888888', '10/24/2018 15:03:53.546', '88888888888', 
+'10/24/2018 15:03:53.553' ) 
+ {executed in 45 msec}
+2018-10-24 15:03:53.827[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:53.831[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:53.835[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> d646540482084dc49d7ca45527129722
+2018-10-24 15:03:53.873[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '98706847adf74cf6a0f32dc1a3f4fb90', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:53.860', 'getAuthCode', '88888888888', '10/24/2018 15:03:53.859', '88888888888', 
+'10/24/2018 15:03:53.860' ) 
+ {executed in 4 msec}
+2018-10-24 15:03:53.879[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.188[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.214[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:54.215[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 162b2dfd97ba41fd8e3ef88e42864db5
+2018-10-24 15:03:54.252[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'b987bcf77e5d45a9b449403f30d89028', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:54.245', 'getAuthCode', '88888888888', '10/24/2018 15:03:54.245', '88888888888', 
+'10/24/2018 15:03:54.245' ) 
+ {executed in 2 msec}
+2018-10-24 15:03:54.258[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.419[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.436[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:54.437[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 8e232b4820374672baf5a4a60b7aff8c
+2018-10-24 15:03:54.455[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '5451c8870f4a4576b98f93de83ba1b6e', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:54.443', 'getAuthCode', '88888888888', '10/24/2018 15:03:54.443', '88888888888', 
+'10/24/2018 15:03:54.443' ) 
+ {executed in 2 msec}
+2018-10-24 15:03:54.462[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.676[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.678[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:54.681[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 6ac9cb120d3647d1a5cc31ebd8fdc653
+2018-10-24 15:03:54.719[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c41981f9114943ed84c622214a4cd988', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:54.705', 'getAuthCode', '88888888888', '10/24/2018 15:03:54.704', '88888888888', 
+'10/24/2018 15:03:54.705' ) 
+ {executed in 7 msec}
+2018-10-24 15:03:54.727[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.865[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:54.867[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:54.868[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 10a8eedbc9734bbf9088c5117a33e284
+2018-10-24 15:03:54.916[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '44efd8eb7e9c41a4840f31b9420b9756', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:54.873', 'getAuthCode', '88888888888', '10/24/2018 15:03:54.873', '88888888888', 
+'10/24/2018 15:03:54.873' ) 
+ {executed in 31 msec}
+2018-10-24 15:03:54.941[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.052[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.053[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.054[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 31ad4ffd4f5749df8b2e9793db7f795d
+2018-10-24 15:03:55.092[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.098[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '734eca5c651c427598c31d9858f3c532', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.061', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.061', '88888888888', 
+'10/24/2018 15:03:55.061' ) 
+ {executed in 11 msec}
+2018-10-24 15:03:55.234[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.236[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.238[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> b00331888ea243fabfccabbd25832eec
+2018-10-24 15:03:55.269[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'd31d1f68660a408f886a75c5d65a4d95', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.253', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.253', '88888888888', 
+'10/24/2018 15:03:55.253' ) 
+ {executed in 3 msec}
+2018-10-24 15:03:55.285[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.419[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.422[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.423[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 3362566099894b63803c2841fc1df7cf
+2018-10-24 15:03:55.459[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '3299d2dc227945a581ccdf0b5a511ecb', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.435', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.435', '88888888888', 
+'10/24/2018 15:03:55.435' ) 
+ {executed in 3 msec}
+2018-10-24 15:03:55.481[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.601[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.603[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.605[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> ce29069cb3114fbaadec2745ae4aeb3d
+2018-10-24 15:03:55.637[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'fb9278bd0bcd444389ea09cf657ceccf', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.624', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.624', '88888888888', 
+'10/24/2018 15:03:55.624' ) 
+ {executed in 2 msec}
+2018-10-24 15:03:55.651[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.792[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.795[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.800[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 3da83872a12b4dd09719510781bcdd80
+2018-10-24 15:03:55.836[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '87d35ca30f794bbebe65a35a95961d78', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.822', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.822', '88888888888', 
+'10/24/2018 15:03:55.822' ) 
+ {executed in 8 msec}
+2018-10-24 15:03:55.844[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.981[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:55.985[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:55.986[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 937e04454f964a808537a38b439b9fb8
+2018-10-24 15:03:56.014[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '0e1a8d527d4d463ca4e1f759c203ec33', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:55.993', 'getAuthCode', '88888888888', '10/24/2018 15:03:55.993', '88888888888', 
+'10/24/2018 15:03:55.993' ) 
+ {executed in 10 msec}
+2018-10-24 15:03:56.027[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:56.165[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:03:56.171[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:03:56.173[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> c18f1fde5dbe4d8ebc82c3b14da8d0da
+2018-10-24 15:03:56.205[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '3459a18a51c24f77bb2509e291e6c871', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:03:56.183', 'getAuthCode', '88888888888', '10/24/2018 15:03:56.183', '88888888888', 
+'10/24/2018 15:03:56.183' ) 
+ {executed in 2 msec}
+2018-10-24 15:03:56.218[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:33.086[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:33.088[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:33.092[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 684e1acd0ecf49718fdc8facb4937847
+2018-10-24 15:04:33.117[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '3637e2f6a8bd4b7bb96fcb77776bbf29', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:33.102', 'getAuthCode', '88888888888', '10/24/2018 15:04:33.102', '88888888888', 
+'10/24/2018 15:04:33.102' ) 
+ {executed in 5 msec}
+2018-10-24 15:04:33.138[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.400[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.402[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:41.404[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> d60ccd3a0a344b689bc679407fb4a945
+2018-10-24 15:04:41.426[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '9dd8947bae3049d98b07787fa862dfce', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:41.416', 'getAuthCode', '88888888888', '10/24/2018 15:04:41.416', '88888888888', 
+'10/24/2018 15:04:41.416' ) 
+ {executed in 2 msec}
+2018-10-24 15:04:41.448[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.553[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.556[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:41.558[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 255af3670a1e47378393f0f3022b649e
+2018-10-24 15:04:41.605[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.615[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '5a0b53abad17498a9ea93f6f52adc448', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:41.577', 'getAuthCode', '88888888888', '10/24/2018 15:04:41.577', '88888888888', 
+'10/24/2018 15:04:41.577' ) 
+ {executed in 20 msec}
+2018-10-24 15:04:41.715[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.719[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:41.727[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> c5b626393b9f4598a441b84012ec96eb
+2018-10-24 15:04:41.754[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'e936f7cca5654594b5901ed4d9bb39e1', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:41.745', 'getAuthCode', '88888888888', '10/24/2018 15:04:41.745', '88888888888', 
+'10/24/2018 15:04:41.745' ) 
+ {executed in 2 msec}
+2018-10-24 15:04:41.768[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.865[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:41.869[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:41.871[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 5e9f3ce2d6a14851bfb05ffd7a591c37
+2018-10-24 15:04:41.887[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '66000fa11d99456ca66c247edea6a2ef', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:41.881', 'getAuthCode', '88888888888', '10/24/2018 15:04:41.881', '88888888888', 
+'10/24/2018 15:04:41.881' ) 
+ {executed in 3 msec}
+2018-10-24 15:04:41.902[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.034[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.035[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.035[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 7c98fa58874d42e78ea18630b66de630
+2018-10-24 15:04:42.073[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '197790d89cd14b969f0fe38dfe21bde2', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.050', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.050', '88888888888', 
+'10/24/2018 15:04:42.050' ) 
+ {executed in 5 msec}
+2018-10-24 15:04:42.088[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.185[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.186[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.188[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 4f43e994b6ec41e4b73c267cfb736554
+2018-10-24 15:04:42.237[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '264d44899fd04ad0917b85bd6f7b2bdc', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.193', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.193', '88888888888', 
+'10/24/2018 15:04:42.193' ) 
+ {executed in 9 msec}
+2018-10-24 15:04:42.246[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.355[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.357[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.359[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 8fe1269620d04b89bc0f018b86f7ea53
+2018-10-24 15:04:42.377[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '116e3b11370f4855b6f1d58ffdc9c3c7', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.370', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.368', '88888888888', 
+'10/24/2018 15:04:42.370' ) 
+ {executed in 3 msec}
+2018-10-24 15:04:42.395[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.542[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.543[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.544[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 02d8253587e14d26a116b2d4c57f5ee4
+2018-10-24 15:04:42.581[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'd6b6c362f9434e4cb31ed7a13db5308f', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.547', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.547', '88888888888', 
+'10/24/2018 15:04:42.547' ) 
+ {executed in 26 msec}
+2018-10-24 15:04:42.606[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.710[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.711[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.711[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 838690a781d44317810ab8b83a63b757
+2018-10-24 15:04:42.732[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'e9a70315d5cc4f0c89cab055516265cd', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.716', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.716', '88888888888', 
+'10/24/2018 15:04:42.716' ) 
+ {executed in 2 msec}
+2018-10-24 15:04:42.750[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.898[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:42.901[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:42.905[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> e385bf7bb85948efa66b60f15ac7363b
+2018-10-24 15:04:42.932[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '6a9603811cfa4572b1e08fed78af08d3', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:42.918', 'getAuthCode', '88888888888', '10/24/2018 15:04:42.918', '88888888888', 
+'10/24/2018 15:04:42.918' ) 
+ {executed in 6 msec}
+2018-10-24 15:04:42.945[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.076[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.078[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.080[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 8cd4d6be1fd14f1aa6cf83f654104120
+2018-10-24 15:04:43.113[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '1469a1ca9f4e48608eb549f4ccef1e84', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:43.086', 'getAuthCode', '88888888888', '10/24/2018 15:04:43.086', '88888888888', 
+'10/24/2018 15:04:43.086' ) 
+ {executed in 16 msec}
+2018-10-24 15:04:43.261[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.263[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.264[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 5ae1d463b74543688588a279d9b91808
+2018-10-24 15:04:43.296[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'e421ee93458b49088f2e9c1cd1ff4dd4', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:43.277', 'getAuthCode', '88888888888', '10/24/2018 15:04:43.277', '88888888888', 
+'10/24/2018 15:04:43.277' ) 
+ {executed in 3 msec}
+2018-10-24 15:04:43.434[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.436[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.440[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> e0fc521e7c75469c9395be6d0e37fc97
+2018-10-24 15:04:43.469[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '278360bd58154e4893835c11a567c243', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:43.455', 'getAuthCode', '88888888888', '10/24/2018 15:04:43.454', '88888888888', 
+'10/24/2018 15:04:43.454' ) 
+ {executed in 8 msec}
+2018-10-24 15:04:43.582[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.607[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.610[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.612[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 565b629649534d30adfa3a02c18c3e0b
+2018-10-24 15:04:43.647[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c3fe33540af9400097cf6c950067ad23', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:43.628', 'getAuthCode', '88888888888', '10/24/2018 15:04:43.628', '88888888888', 
+'10/24/2018 15:04:43.628' ) 
+ {executed in 8 msec}
+2018-10-24 15:04:43.652[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.791[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.796[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.800[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> cc15a3e1816a4cc582d1088999f27a3d
+2018-10-24 15:04:43.827[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'aef58215d2cb459485f9d87127450382', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:43.814', 'getAuthCode', '88888888888', '10/24/2018 15:04:43.814', '88888888888', 
+'10/24/2018 15:04:43.814' ) 
+ {executed in 6 msec}
+2018-10-24 15:04:43.837[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.978[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:43.981[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:43.984[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 89d64f29ac604034b716b65f001eef30
+2018-10-24 15:04:44.024[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '317656fd64724628bc0f1fb6d24d24ad', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.005', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.005', '88888888888', 
+'10/24/2018 15:04:44.005' ) 
+ {executed in 2 msec}
+2018-10-24 15:04:44.047[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.147[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.150[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:44.154[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 4512781b99bc43549fc74033be1d1955
+2018-10-24 15:04:44.182[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'de31c32b0a6d4b81bcd903ba311e54f7', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.171', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.171', '88888888888', 
+'10/24/2018 15:04:44.171' ) 
+ {executed in 2 msec}
+2018-10-24 15:04:44.199[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.327[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.330[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:44.335[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 3776cdf53e8149c6b551f914c7e530e8
+2018-10-24 15:04:44.364[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '4b1e81d98c99487f8234fb7faddd8b3c', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.355', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.355', '88888888888', 
+'10/24/2018 15:04:44.355' ) 
+ {executed in 3 msec}
+2018-10-24 15:04:44.378[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.506[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.507[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:44.509[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 2df6e8140439430dad6666aad67071ce
+2018-10-24 15:04:44.533[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'f40ece88cb1b4ec9b6795407fe366e9e', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.522', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.521', '88888888888', 
+'10/24/2018 15:04:44.522' ) 
+ {executed in 7 msec}
+2018-10-24 15:04:44.558[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.687[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.690[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:44.692[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 2e009d96b5c8407a9a812db75435004d
+2018-10-24 15:04:44.729[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '4332ceda7ddd4cb7b0c5e6593bf8a319', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.709', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.708', '88888888888', 
+'10/24/2018 15:04:44.709' ) 
+ {executed in 3 msec}
+2018-10-24 15:04:44.741[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.883[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:44.884[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:44.886[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> 8a98141b7ea14740b2303fc3fa5f5d5e
+2018-10-24 15:04:44.929[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'daeec8f522ba4d0fb2d1058440d61eb7', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:44.899', 'getAuthCode', '88888888888', '10/24/2018 15:04:44.899', '88888888888', 
+'10/24/2018 15:04:44.899' ) 
+ {executed in 24 msec}
+2018-10-24 15:04:44.931[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:45.043[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:04:45.045[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:04:45.047[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e0cce402-e772-4e91-9fe9-83821cf6a8f5 -> bbf58fed1f594eb295791ccb0dfe13d8
+2018-10-24 15:04:45.070[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'ad9ce117573247d3a1d1e1c845d56d27', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:04:45.058', 'getAuthCode', '88888888888', '10/24/2018 15:04:45.058', '88888888888', 
+'10/24/2018 15:04:45.058' ) 
+ {executed in 6 msec}
+2018-10-24 15:04:45.093[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:04.500[INFO][Druid-ConnectionPool-Create-8996952]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 15:07:04.569[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 26 msec}
+2018-10-24 15:07:06.058[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 15:07:06.063[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 15:07:06.064[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 15:07:06.064[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 15:07:10.592[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:10.624[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:10.678[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> 857eaaf952bf46fe849b20abf2dfc7aa
+2018-10-24 15:07:11.033[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:16.171[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '573b5d5cbb5d4a58973e184862d2c459', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:10.995', 'getAuthCode', '88888888888', '10/24/2018 15:07:10.994', '88888888888', 
+'10/24/2018 15:07:10.994' ) 
+ {executed in 64 msec}
+2018-10-24 15:07:21.061[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.063[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:21.065[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> 79eececf21294844910faf3533c9cfb0
+2018-10-24 15:07:21.147[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.330[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.337[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:21.340[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> 5d15ac141a8e4340b869bc07e842d3d8
+2018-10-24 15:07:21.380[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.592[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.595[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:21.601[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> 517b7ffd8d804fe0bad6f42d1aba5566
+2018-10-24 15:07:21.648[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.875[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:21.878[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:21.880[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> 486727e47d6546e6b291d9d47de1e513
+2018-10-24 15:07:21.925[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:22.108[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:22.111[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:07:22.113[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：62dcf007-bc66-4654-9bf9-296289ef81ed -> c87bfa8a6d1d44d3ac5d6b757f265a8f
+2018-10-24 15:07:22.176[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:07:26.149[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'b47641e45ae143b996e30038c3268ccf', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:21.110', 'getAuthCode', '88888888888', '10/24/2018 15:07:21.106', '88888888888', 
+'10/24/2018 15:07:21.110' ) 
+ {executed in 3 msec}
+2018-10-24 15:07:31.275[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '32a8527c40fe48f9a300314860ca7ce4', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:21.365', 'getAuthCode', '88888888888', '10/24/2018 15:07:21.365', '88888888888', 
+'10/24/2018 15:07:21.365' ) 
+ {executed in 53 msec}
+2018-10-24 15:07:36.371[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c8b44c81591740d9bf732c4c1a3a982f', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:21.629', 'getAuthCode', '88888888888', '10/24/2018 15:07:21.629', '88888888888', 
+'10/24/2018 15:07:21.629' ) 
+ {executed in 3 msec}
+2018-10-24 15:07:41.454[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '417024d0fbff4ca9ba4c350445e6a6f7', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:21.895', 'getAuthCode', '88888888888', '10/24/2018 15:07:21.894', '88888888888', 
+'10/24/2018 15:07:21.894' ) 
+ {executed in 13 msec}
+2018-10-24 15:07:46.537[INFO][logExecutor1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'a8ff416b6d9a4a57a722f373f58e7bc2', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:07:22.158', 'getAuthCode', '88888888888', '10/24/2018 15:07:22.157', '88888888888', 
+'10/24/2018 15:07:22.158' ) 
+ {executed in 1 msec}
+2018-10-24 15:09:59.453[INFO][Druid-ConnectionPool-Create-2074492901]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 15:09:59.546[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 49 msec}
+2018-10-24 15:10:01.062[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 15:10:01.067[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 15:10:01.068[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 15:10:01.068[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 15:10:04.300[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:10:04.332[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:10:04.390[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:10:04.391[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:10:04.441[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：a009258e-4c31-4a2b-8916-e5fd3e9c874d -> 47e394790e384a01bf5c852d629711c1
+2018-10-24 15:10:04.515[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:10:04.516[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:10:04.719[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e40998b2-26b8-414b-8f35-45948570e200 -> 235fff9744c3488ba23b3270cd20268b
+2018-10-24 15:10:04.766[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：0c344426-3db3-4ba0-81b5-6d576c0eb177 -> 37e2438c1c034d329531b0609c11b062
+2018-10-24 15:10:04.816[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:10:04.818[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:10:04.832[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：e40998b2-26b8-414b-8f35-45948570e200 -> 3e35c4a32b484efdb23b77c558b8cf37
+2018-10-24 15:10:04.925[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:10:10.039[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c5908a2a483f40609f24df7d44e00943', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:10:04.807', 'getAuthCode', '88888888888', '10/24/2018 15:10:04.806', '88888888888', 
+'10/24/2018 15:10:04.807' ) 
+ {executed in 66 msec}
+2018-10-24 15:10:15.097[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'f7dd62a2b9af40ebb44106ded4c7eba3', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:10:04.902', 'getAuthCode', '88888888888', '10/24/2018 15:10:04.902', '88888888888', 
+'10/24/2018 15:10:04.902' ) 
+ {executed in 14 msec}
+2018-10-24 15:10:20.181[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '20eec6b0f39245eebc3af53a087dc50e', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:10:04.797', 'getAuthCode', '88888888888', '10/24/2018 15:10:04.796', '88888888888', 
+'10/24/2018 15:10:04.796' ) 
+ {executed in 9 msec}
+2018-10-24 15:10:25.289[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '10a8295f06eb48b886d164662f73d1f2', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:10:04.905', 'getAuthCode', '88888888888', '10/24/2018 15:10:04.902', '88888888888', 
+'10/24/2018 15:10:04.905' ) 
+ {executed in 39 msec}
+2018-10-24 15:21:08.302[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 15:21:08.351[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 22 msec}
+2018-10-24 15:21:09.872[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 15:21:09.876[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 15:21:09.877[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 15:21:09.877[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 15:21:15.419[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:15.456[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:21:15.525[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> 31ab1f0da61d4f1f83b70ecd8531f63c
+2018-10-24 15:21:15.926[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.106[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.108[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:21:16.110[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> d87ceaf00c3e460dac0be616d92e0cf5
+2018-10-24 15:21:16.139[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.175[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 3 msec}
+2018-10-24 15:21:16.593[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.614[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:21:16.617[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> 6d7c260b2dec47718df1e8d924814ba9
+2018-10-24 15:21:16.660[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.756[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 15:21:16.981[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:16.988[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:21:16.992[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> d54a204abfe04989ab35528a57c2665b
+2018-10-24 15:21:17.049[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:17.055[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 1 msec}
+2018-10-24 15:21:17.322[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:17.325[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:21:17.328[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> bca2327dc6104cb39e2700063d715268
+2018-10-24 15:21:17.391[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:21:17.466[INFO][Druid-ConnectionPool-Create-215632153]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 1 msec}
+2018-10-24 15:21:21.033[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '32d1b84f789a4b60802500279402a27d', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:21:15.895', 'getAuthCode', '88888888888', '10/24/2018 15:21:15.894', '88888888888', 
+'10/24/2018 15:21:15.895' ) 
+ {executed in 50 msec}
+2018-10-24 15:21:21.202[INFO][logExecutor-2]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'afb08b3781c04c22b80faff3ea95b6ab', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:21:16.132', 'getAuthCode', '88888888888', '10/24/2018 15:21:16.131', '88888888888', 
+'10/24/2018 15:21:16.131' ) 
+ {executed in 16 msec}
+2018-10-24 15:21:21.818[INFO][logExecutor-3]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '1546b53cbb8245b8acf6da6ce6866990', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:21:16.637', 'getAuthCode', '88888888888', '10/24/2018 15:21:16.637', '88888888888', 
+'10/24/2018 15:21:16.637' ) 
+ {executed in 48 msec}
+2018-10-24 15:21:22.146[INFO][logExecutor-4]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'b1359bc828dc461a9eb4c8321cf99ab4', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:21:17.024', 'getAuthCode', '88888888888', '10/24/2018 15:21:17.023', '88888888888', 
+'10/24/2018 15:21:17.024' ) 
+ {executed in 75 msec}
+2018-10-24 15:21:22.495[INFO][logExecutor-5]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '19638d0ac05a49c6b9a6cedf7ee07847', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:21:17.345', 'getAuthCode', '88888888888', '10/24/2018 15:21:17.344', '88888888888', 
+'10/24/2018 15:21:17.345' ) 
+ {executed in 5 msec}
+2018-10-24 15:22:03.784[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:03.788[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:22:03.790[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> a805594244664b8e91f88e5b7cd57a0d
+2018-10-24 15:22:03.868[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:03.943[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:03.945[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:22:03.947[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> 36165561311640279b723e1fd2a2b8dc
+2018-10-24 15:22:03.979[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:04.111[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:04.115[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:22:04.119[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> ff83ede4c99f496fa80e8348b273a79f
+2018-10-24 15:22:04.171[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:22:08.876[INFO][logExecutor-6]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '92ff5b1b7c55447c91c9243883fbe0ad', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:22:03.827', 'getAuthCode', '88888888888', '10/24/2018 15:22:03.825', '88888888888', 
+'10/24/2018 15:22:03.827' ) 
+ {executed in 3 msec}
+2018-10-24 15:22:08.983[INFO][logExecutor-7]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'a2c6d3e3d64041448661f82817da1337', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:22:03.960', 'getAuthCode', '88888888888', '10/24/2018 15:22:03.960', '88888888888', 
+'10/24/2018 15:22:03.960' ) 
+ {executed in 13 msec}
+2018-10-24 15:22:09.166[INFO][logExecutor-8]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '9bd2ff7ae3834befa7f911c84768dcee', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:22:04.148', 'getAuthCode', '88888888888', '10/24/2018 15:22:04.146', '88888888888', 
+'10/24/2018 15:22:04.146' ) 
+ {executed in 3 msec}
+2018-10-24 15:23:00.269[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:00.272[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:23:00.273[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> f844e0ec92f941248113c43882dccdd4
+2018-10-24 15:23:00.325[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:00.477[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:00.479[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:23:00.481[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> 7a36ed05d5fd4b8f8f1b9d69e3d37b39
+2018-10-24 15:23:00.526[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:00.744[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:00.747[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 15:23:00.748[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：f6d0a9f8-45d6-4933-95fa-761233881790 -> 140ffe8aaff54dc7a91b53e65e825bff
+2018-10-24 15:23:00.775[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 15:23:05.364[INFO][logExecutor-9]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'e5a76d822ebc492fbdafe9f385e606bb', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:23:00.280', 'getAuthCode', '88888888888', '10/24/2018 15:23:00.280', '88888888888', 
+'10/24/2018 15:23:00.280' ) 
+ {executed in 46 msec}
+2018-10-24 15:23:05.515[INFO][logExecutor-10]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'ffe2a5dd233c49dcbc48c65b62dbcc26', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:23:00.502', 'getAuthCode', '88888888888', '10/24/2018 15:23:00.502', '88888888888', 
+'10/24/2018 15:23:00.502' ) 
+ {executed in 2 msec}
+2018-10-24 15:23:05.771[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '51cc1ef86bf74c3da0b63a6aca996073', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 15:23:00.756', 'getAuthCode', '88888888888', '10/24/2018 15:23:00.756', '88888888888', 
+'10/24/2018 15:23:00.756' ) 
+ {executed in 3 msec}
+2018-10-24 20:20:53.038[INFO][Druid-ConnectionPool-Create-1337655323]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 20:20:53.284[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 144 msec}
+2018-10-24 20:20:56.117[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-10-24 20:20:56.124[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-10-24 20:20:56.125[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-10-24 20:20:56.125[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-10-24 20:21:06.400[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:06.467[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:06.562[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 54a8dd2aa7d24409bc28be0386e2a694
+2018-10-24 20:21:16.918[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'e863edd1f4e9404e8bf9237e991cf5e8', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:13.599', 'getAuthCode', '88888888888', '10/24/2018 20:21:13.597', '88888888888', 
+'10/24/2018 20:21:13.599' ) 
+ {executed in 31 msec}
+2018-10-24 20:21:50.051[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.053[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:50.056[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 7eecd848296b448998fa26b2e7071138
+2018-10-24 20:21:50.149[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.265[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.268[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:50.268[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 253d7316ef8841d3a697fb25a9a8a83f
+2018-10-24 20:21:50.303[INFO][Druid-ConnectionPool-Create-1337655323]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-10-24 20:21:50.318[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.407[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.407[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:50.407[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 7e4c5aaf6afa4ad1905b222889514809
+2018-10-24 20:21:50.443[INFO][Druid-ConnectionPool-Create-1337655323]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-10-24 20:21:50.451[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.605[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.605[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:50.621[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 9e19ebce1b3344f2932ebb3ac10140de
+2018-10-24 20:21:50.661[INFO][Druid-ConnectionPool-Create-1337655323]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 3 msec}
+2018-10-24 20:21:50.668[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.782[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:50.782[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:21:50.782[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 646d1e39be2d434dbc372dc47cbe5778
+2018-10-24 20:21:50.817[INFO][Druid-ConnectionPool-Create-1337655323]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-10-24 20:21:50.830[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:21:53.119[INFO][logExecutor-2]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '061bce536bc846a184f9b7e4332141a3', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:50.096', 'getAuthCode', '88888888888', '10/24/2018 20:21:50.096', '88888888888', 
+'10/24/2018 20:21:50.096' ) 
+ {executed in 0 msec}
+2018-10-24 20:21:53.323[INFO][logExecutor-3]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '53f36df938644243931b88a5505a812f', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:50.278', 'getAuthCode', '88888888888', '10/24/2018 20:21:50.275', '88888888888', 
+'10/24/2018 20:21:50.278' ) 
+ {executed in 0 msec}
+2018-10-24 20:21:53.463[INFO][logExecutor-4]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'd8a406d99808477da7536ebebb1c91cc', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:50.423', 'getAuthCode', '88888888888', '10/24/2018 20:21:50.423', '88888888888', 
+'10/24/2018 20:21:50.423' ) 
+ {executed in 0 msec}
+2018-10-24 20:21:53.697[INFO][logExecutor-5]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '52603234b0c844a6b81401fcd9be1476', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:50.636', 'getAuthCode', '88888888888', '10/24/2018 20:21:50.636', '88888888888', 
+'10/24/2018 20:21:50.636' ) 
+ {executed in 15 msec}
+2018-10-24 20:21:53.853[INFO][logExecutor-6]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '080813acc595481292a2ed13c38c2ee2', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:21:50.800', 'getAuthCode', '88888888888', '10/24/2018 20:21:50.800', '88888888888', 
+'10/24/2018 20:21:50.800' ) 
+ {executed in 15 msec}
+2018-10-24 20:22:58.854[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:22:58.857[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:22:58.865[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 26cd902862be45cdba896adc5c2bb8a7
+2018-10-24 20:22:58.909[INFO][logExecutor-7]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-10-24 20:22:58.914[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:22:59.099[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:22:59.114[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:22:59.114[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 762847ce88cc43df9c30c75e535675cb
+2018-10-24 20:22:59.175[INFO][logExecutor-8]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-10-24 20:22:59.193[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:22:59.452[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:22:59.454[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:22:59.457[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> 615fd3426e9d492ca6950ea98b2e1361
+2018-10-24 20:22:59.492[INFO][logExecutor-9]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-10-24 20:22:59.499[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:23:01.914[INFO][logExecutor-7]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '52a6f0de065c408fa6977b1a398ec9ac', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:22:58.887', 'getAuthCode', '88888888888', '10/24/2018 20:22:58.887', '88888888888', 
+'10/24/2018 20:22:58.887' ) 
+ {executed in 0 msec}
+2018-10-24 20:23:02.195[INFO][logExecutor-8]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( 'c3e2f875c01547f1a840c5bc01c7544c', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:22:59.158', 'getAuthCode', '88888888888', '10/24/2018 20:22:59.155', '88888888888', 
+'10/24/2018 20:22:59.158' ) 
+ {executed in 0 msec}
+2018-10-24 20:23:02.507[INFO][logExecutor-9]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '3fd9246e9be34aad9405a91c8f644f6e', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:22:59.477', 'getAuthCode', '88888888888', '10/24/2018 20:22:59.477', '88888888888', 
+'10/24/2018 20:22:59.477' ) 
+ {executed in 0 msec}
+2018-10-24 20:23:05.184[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:23:05.189[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:23:05.189[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> daee067abc2c4e49b56814563fa57bfe
+2018-10-24 20:23:05.230[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:23:08.215[INFO][logExecutor-10]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '44bb531e15e9457bafd0454e77193145', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:23:05.199', 'getAuthCode', '88888888888', '10/24/2018 20:23:05.199', '88888888888', 
+'10/24/2018 20:23:05.199' ) 
+ {executed in 0 msec}
+2018-10-24 20:23:11.488[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:23:11.490[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-10-24 20:23:11.495[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：b47c9d9b-6770-4e7b-963e-37e325c0b466 -> a272644e0a2c4d9a893f1e7d88b3e2f0
+2018-10-24 20:23:11.529[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-10-24 20:23:14.518[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '77a700562d204667bbc409d0181768f2', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '00-00-00-00-00-00', 
+'10/24/2018 20:23:11.500', 'getAuthCode', '88888888888', '10/24/2018 20:23:11.500', '88888888888', 
+'10/24/2018 20:23:11.500' ) 
+ {executed in 0 msec}

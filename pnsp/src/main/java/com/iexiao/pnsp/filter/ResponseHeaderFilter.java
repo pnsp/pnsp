@@ -10,9 +10,15 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.iexiao.pnsp.utils.shiro.ShiroUtil;
+
 public class ResponseHeaderFilter implements Filter{
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(ShiroUtil.class);
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
@@ -22,7 +28,7 @@ public class ResponseHeaderFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.err.println("== 请求头过滤  ==============================");
+		//LOGGER.info("[请求头过滤]");
 		HttpServletResponse res = ((HttpServletResponse) response);
 		res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, accept, content-type, origin");
 		res.setHeader("Access-Control-Allow-Methods", "GET, HEAD, POST, PUT, DELETE, OPTIONS");

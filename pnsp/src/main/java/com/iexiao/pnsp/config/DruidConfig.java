@@ -1,26 +1,17 @@
 package com.iexiao.pnsp.config;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-import org.springframework.jndi.JndiObjectFactoryBean;
 
-import com.alibaba.druid.filter.Filter;
-import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.support.http.StatViewServlet;
-import com.google.common.collect.Lists;
 
 @Configuration
-@PropertySource("classpath:/properties/application-druid.properties")
+@PropertySource("classpath:/application.properties")
 public class DruidConfig {
 	
 	//Environment四种获取属性的形式
@@ -38,7 +29,7 @@ public class DruidConfig {
 	public DruidDataSource dataSource() {
 		DruidDataSource dataSource = new DruidDataSource();
 		//连接池添加慢日志
-		dataSource.setProxyFilters(Lists.newArrayList(statFilter()));
+		//dataSource.setProxyFilters(Lists.newArrayList(statFilter()));
 		return dataSource;
 	}
 	
@@ -48,7 +39,7 @@ public class DruidConfig {
 	 * @date 2018年4月25日
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public Filter statFilter() {
 		StatFilter filter = new StatFilter();
 		//慢sql日志最少时间
@@ -58,7 +49,7 @@ public class DruidConfig {
 		//是否合并日志
 		filter.setMergeSql(true);
 		return filter;
-	}
+	}*/
 	
 	/**
 	 * 包装
@@ -66,9 +57,9 @@ public class DruidConfig {
 	 * @date 2018年4月25日
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public ServletRegistrationBean servletRegistrationBean() {
 		return new ServletRegistrationBean(new StatViewServlet(),"/druid/*"); //指定拦截的url
-	}
+	}*/
 	
 }

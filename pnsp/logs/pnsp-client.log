@@ -1,0 +1,812 @@
+2018-11-15 09:10:12.864[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:13.972[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:14.987[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:16.000[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:17.017[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:18.018[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:19.028[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:20.056[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:21.065[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:22.066[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:23.064[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:24.077[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:25.096[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:26.111[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:27.126[ERROR][Druid-ConnectionPool-Create-1997625595]com.alibaba.druid.pool.DruidDataSource.error: create connection error, url: jdbc:log4jdbc:mysql://127.0.0.1:3306/pnsp?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:590) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1606) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:633) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:347) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:219) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at net.sf.log4jdbc.DriverSpy.connect(DriverSpy.java:728) ~[log4jdbc-1.2.jar:?]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1464) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1529) ~[druid-1.1.2.jar:1.1.2]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2185) [druid-1.1.2.jar:1.1.2]
+Caused by: com.mysql.cj.core.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_40]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_40]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_40]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[?:1.8.0_40]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:54) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:93) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createException(ExceptionFactory.java:133) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.core.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:149) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:83) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_40]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_40]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_40]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_40]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_40]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_40]
+	at com.mysql.cj.core.io.StandardSocketFactory.connect(StandardSocketFactory.java:202) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.io.MysqlaSocketConnection.connect(MysqlaSocketConnection.java:57) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.mysqla.MysqlaSession.connect(MysqlaSession.java:122) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:1726) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:1596) ~[mysql-connector-java-6.0.6.jar:6.0.6]
+	... 7 more
+2018-11-15 09:10:30.638[INFO][Druid-ConnectionPool-Create-1997625595]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 0 msec}
+2018-11-15 09:10:30.748[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 62 msec}
+2018-11-15 09:10:32.763[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-11-15 09:10:32.763[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-11-15 09:10:32.763[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-11-15 09:10:32.763[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-11-15 09:10:47.124[INFO][Druid-ConnectionPool-Create-1251285265]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-11-15 09:10:47.181[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 9 msec}
+2018-11-15 09:10:48.854[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-11-15 09:10:48.854[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-11-15 09:10:48.854[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-11-15 09:10:48.854[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-11-15 09:11:08.840[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:08.934[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:08.946[INFO][http-nio-8081-exec-9]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:09.316[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:13.426[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:13.430[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:13.517[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：73e87908-4c50-4c1e-9821-0ec3e739fd77 -> 0148b0ef4373448da8e21ae0bcbd7d7b
+2018-11-15 09:11:20.547[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '4137e658daef4eb8a9b46854cfea66f9', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', 'a8-7c-01-52-b0-2e', 
+'11/15/2018 09:11:16.946', 'getAuthCode', '88888888888', '11/15/2018 09:11:16.945', '88888888888', 
+'11/15/2018 09:11:16.945' ) 
+ {executed in 47 msec}
+2018-11-15 09:11:32.464[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:32.466[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:32.507[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:32.511[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:32.709[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.user.controller.PnspUserTController.login: [UsernamePasswordToken start] -> 3d73a4d1204b4f1990792daf6e51403f
+2018-11-15 09:11:32.768[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.user.controller.PnspUserTController.login: [UsernamePasswordToken end] -> 3d73a4d1204b4f1990792daf6e51403f
+2018-11-15 09:11:32.768[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.user.serviceImpl.PnspUserTServiceImpl.getBeanByPhone: token username：13670253691 -> 3d73a4d1204b4f1990792daf6e51403f
+2018-11-15 09:11:32.769[INFO][http-nio-8081-exec-10]com.iexiao.pnsp.user.serviceImpl.PnspUserTServiceImpl.getBeanByPhone: token password：54b79a401753aa1a0edea47466978881 -> 3d73a4d1204b4f1990792daf6e51403f
+2018-11-15 09:11:32.774[INFO][http-nio-8081-exec-10]jdbc.sqltiming.sqlTimingOccured: SELECT id,last_name,phone,id_card,email,sex,age,password,eff_status,role_id, add_oprid,add_dttm,upd_oprid,upd_dttm 
+FROM pnsp_user_t WHERE phone = '13670253691' 
+ {executed in 4 msec} -> 3d73a4d1204b4f1990792daf6e51403f
+2018-11-15 09:11:32.858[INFO][Thread-8]com.iexiao.pnsp.user.controller.PnspUserTController.run: login ipAddress：127.0.0.1
+2018-11-15 09:11:33.020[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:33.288[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:11:33.288[INFO][http-nio-8081-exec-2]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:11:33.319[INFO][http-nio-8081-exec-2]jdbc.sqltiming.sqlTimingOccured: select id,group_id,name,descr,router_name,router_path,url,src_name,suffix,eff_status add_oprid,add_dttm,upd_oprid,upd_dttm 
+from pnsp_image_t where eff_status = '1' and group_id = 'P0001' 
+ {executed in 0 msec} -> fec884ce36cb490eb4c050d88231c21a
+2018-11-15 09:12:08.513[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:12:08.516[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:12:08.523[INFO][http-nio-8081-exec-8]jdbc.sqltiming.sqlTimingOccured: select id,group_id,name,descr,router_name,router_path,url,src_name,suffix,eff_status add_oprid,add_dttm,upd_oprid,upd_dttm 
+from pnsp_image_t where eff_status = '1' and group_id = 'P0001' 
+ {executed in 1 msec} -> 5b8fc1e0d55e4895a096f8acafe13598
+2018-11-15 09:12:14.671[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:12:14.671[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:12:14.695[INFO][http-nio-8081-exec-4]jdbc.sqltiming.sqlTimingOccured: select id,group_id,name,descr,router_name,router_path,url,src_name,suffix,eff_status add_oprid,add_dttm,upd_oprid,upd_dttm 
+from pnsp_image_t where eff_status = '1' and group_id = 'P0001' 
+ {executed in 24 msec} -> bcc2e3b352284345aa9c38d387986d8b
+2018-11-15 09:24:01.816[INFO][Druid-ConnectionPool-Create-404586280]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-11-15 09:24:01.860[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 4 msec}
+2018-11-15 09:24:03.439[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-11-15 09:24:03.445[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-11-15 09:24:03.445[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-11-15 09:24:03.446[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-11-15 09:24:16.335[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:24:16.372[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:24:16.412[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.user.controller.PnspUserTController.getAuthCode: [/getAuthCode] -> 692aa0679b6a4da2b4da2a7ca8721559
+2018-11-15 09:24:16.424[INFO][http-nio-8081-exec-1]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：fab084ae-4699-4564-8cd3-28382e7d65c3 -> 692aa0679b6a4da2b4da2a7ca8721559
+2018-11-15 09:24:20.021[INFO][logExecutor-1]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '361a7887d05e497ba9c62f70d7a218cd', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', 'a8-7c-01-52-b0-2e', 
+'11/15/2018 09:24:16.717', 'getAuthCode', '88888888888', '11/15/2018 09:24:16.716', '88888888888', 
+'11/15/2018 09:24:16.717' ) 
+ {executed in 4 msec}
+2018-11-15 09:31:21.039[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:21.046[INFO][http-nio-8081-exec-3]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:31:21.070[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:21.079[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:31:21.196[INFO][http-nio-8081-exec-4]com.iexiao.pnsp.user.controller.PnspUserTController.login: [/login] -> cdfdde0c7918447dbec7708adf0aee55
+2018-11-15 09:31:21.200[ERROR][http-nio-8081-exec-4]com.iexiao.pnsp.exception.GlobalExceptionHandler.handler: 验证码已过期，请重新获取 -> cdfdde0c7918447dbec7708adf0aee55
+2018-11-15 09:31:21.342[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:21.343[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:31:21.344[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.user.controller.PnspUserTController.getAuthCode: [/getAuthCode] -> f19f7b623e2746e89a1d4a5544b94278
+2018-11-15 09:31:21.344[INFO][http-nio-8081-exec-5]com.iexiao.pnsp.utils.AuthCode.getRandcode: authCode sessionId：89306cfa-dac8-438d-8016-a366de573389 -> f19f7b623e2746e89a1d4a5544b94278
+2018-11-15 09:31:24.652[INFO][logExecutor-2]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 1 msec}
+2018-11-15 09:31:24.657[INFO][logExecutor-2]jdbc.sqltiming.sqlTimingOccured: insert into pnsp_op_log_t ( id,phone,req_url,op_content,op_type,op_descr,op_status,op_ip,op_mac,op_dttm,key_word, 
+add_oprid,add_dttm,upd_oprid,upd_dttm ) values( '37e65664958f49df835d368eb051c22e', '88888888888', 
+'/pnspUserT/getAuthCode', '', 'query', 'getAuthCode', '1', '127.0.0.1', '94-87-e0-06-d9-ae', 
+'11/15/2018 09:31:21.356', 'getAuthCode', '88888888888', '11/15/2018 09:31:21.356', '88888888888', 
+'11/15/2018 09:31:21.356' ) 
+ {executed in 2 msec}
+2018-11-15 09:31:28.370[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:28.375[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:31:28.380[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.user.controller.PnspUserTController.login: [/login] -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.409[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.user.controller.PnspUserTController.login: [UsernamePasswordToken start] -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.422[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.user.controller.PnspUserTController.login: [UsernamePasswordToken end] -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.423[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.user.serviceImpl.PnspUserTServiceImpl.getBeanByPhone: token username：13670253691 -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.424[INFO][http-nio-8081-exec-6]com.iexiao.pnsp.user.serviceImpl.PnspUserTServiceImpl.getBeanByPhone: token password：54b79a401753aa1a0edea47466978881 -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.440[INFO][http-nio-8081-exec-6]jdbc.sqltiming.sqlTimingOccured: SELECT id,last_name,phone,id_card,email,sex,age,password,eff_status,role_id, add_oprid,add_dttm,upd_oprid,upd_dttm 
+FROM pnsp_user_t WHERE phone = '13670253691' 
+ {executed in 14 msec} -> 54fc21d399d84ee9b8b75e6770bb5fdc
+2018-11-15 09:31:28.462[INFO][Thread-8]com.iexiao.pnsp.user.controller.PnspUserTController.run: login ipAddress：127.0.0.1
+2018-11-15 09:31:28.548[INFO][http-nio-8081-exec-7]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:28.739[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.doFilter: [请求头过滤]
+2018-11-15 09:31:28.741[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.utils.shiro.ShiroUtil.preHandle: [日志mdc加入requestId]
+2018-11-15 09:31:28.753[INFO][http-nio-8081-exec-8]com.iexiao.pnsp.base.controller.PnspImageTController.getImageListByGroupId: [/getImageListByGroupId.do] -> 5bf80d23ba304f7483a315f6da891753
+2018-11-15 09:31:28.770[INFO][http-nio-8081-exec-8]jdbc.sqltiming.sqlTimingOccured: select id,group_id,name,descr,router_name,router_path,url,src_name,suffix,eff_status add_oprid,add_dttm,upd_oprid,upd_dttm 
+from pnsp_image_t where eff_status = '1' and group_id = 'P0001' 
+ {executed in 6 msec} -> 5bf80d23ba304f7483a315f6da891753
+2018-11-15 11:32:29.746[INFO][Druid-ConnectionPool-Create-1756160273]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-11-15 11:32:29.799[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 6 msec}
+2018-11-15 11:32:31.357[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-11-15 11:32:31.362[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-11-15 11:32:31.363[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-11-15 11:32:31.363[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1
+2018-11-15 11:37:51.941[INFO][Druid-ConnectionPool-Create-404036116]jdbc.sqltiming.sqlTimingOccured: SELECT 1 
+ {executed in 2 msec}
+2018-11-15 11:37:51.989[INFO][main]jdbc.sqltiming.sqlTimingOccured: select ptct.task_name,ptct.cron from pnsp_task_cron_t ptct where ptct.eff_status = '1' and 
+ptct.effdt = ( select max(effdt) from pnsp_task_cron_t where task_name = ptct.task_name and 
+effdt <= current_date ) 
+ {executed in 5 msec}
+2018-11-15 11:37:53.493[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: [SpringTask started]
+2018-11-15 11:37:53.499[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: runTaskIpAddress：192.168.6.1
+2018-11-15 11:37:53.499[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: hostAddress：192.168.6.1
+2018-11-15 11:37:53.500[INFO][main]com.iexiao.pnsp.config.SpringTaskConfig.configureTasks: task methods size：1

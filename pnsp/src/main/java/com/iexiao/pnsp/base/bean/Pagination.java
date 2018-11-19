@@ -1,7 +1,9 @@
-package com.iexiao.pnsp.base;
+package com.iexiao.pnsp.base.bean;
 
 import java.io.Serializable;
 import java.util.List;
+
+import com.iexiao.pnsp.base.BaseQuery;
 
 /**
  * 分页容器类

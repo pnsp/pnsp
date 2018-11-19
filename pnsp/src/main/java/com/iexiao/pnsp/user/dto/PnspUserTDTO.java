@@ -31,6 +31,9 @@ public class PnspUserTDTO extends BaseDTO{
 	/** 状态：1 正常 0 失效*/
 	private String effStatus;
 	
+	/** 角色主键*/
+	private String roleId;
+	
 	private String authCode;
 
 	public String getId() {
@@ -103,6 +106,14 @@ public class PnspUserTDTO extends BaseDTO{
 
 	public void setEffStatus(String effStatus) {
 		this.effStatus = effStatus;
+	}
+
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
 	}
 
 	public String getAuthCode() {

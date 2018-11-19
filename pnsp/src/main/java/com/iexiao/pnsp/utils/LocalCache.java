@@ -14,10 +14,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Param <T>
  */
 public class LocalCache<T> {
-	//换算毫秒
-	private static final long SECOND_TIME = 1000;
 	//默认过期时间
-	private final int DEFUALT_VALIDITY_TIME = 20;
+	private static final int DEFUALT_VALIDITY_TIME = 20 * 1000;
 	private static final Timer timer;
 	private static final ConcurrentHashMap<String, Object> map;
 	
@@ -33,7 +31,7 @@ public class LocalCache<T> {
 	 * @param key
 	 * @param value
 	 */
-	public void add(String key,T value) {
+	public static <T> void add(String key,T value) {
 		add(key,value,DEFUALT_VALIDITY_TIME);
 	}
 	
@@ -43,12 +41,12 @@ public class LocalCache<T> {
 	 * @date 2018年3月29日
 	 * @param key
 	 * @param value
-	 * @param validityTime
+	 * @param validityTime (ms)
 	 */
-	public void add(String key,T value,int validityTime) {
+	public static <T> void add(String key,T value,int validityTime) {
 		map.put(key, value);
 		//添加过期定时
-		timer.schedule(new TimeoutTimerTask(key), validityTime * SECOND_TIME);
+		timer.schedule(new TimeoutTimerTask(key), validityTime);
 	}
 	
 	/**
@@ -57,7 +55,7 @@ public class LocalCache<T> {
 	 * @date 2018年3月29日
 	 * @return
 	 */
-	public synchronized List<String> getKeys(){
+	public static synchronized List<String> getKeys(){
 		List<String> keys = new ArrayList<String>();
 		for(Map.Entry<String, Object> e : map.entrySet()) {
 			keys.add(e.getKey());
@@ -73,7 +71,7 @@ public class LocalCache<T> {
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public T get(String key) {
+	public static <T> T get(String key) {
 		return (T) map.get(key);
 	}
 	
@@ -84,7 +82,7 @@ public class LocalCache<T> {
 	 * @param key
 	 * @return
 	 */
-	public boolean contains(String key) {
+	public static boolean containsKey(String key) {
 		return map.containsKey(key);
 	}
 	
@@ -104,7 +102,7 @@ public class LocalCache<T> {
 	 * @date 2018年3月29日
 	 * @return
 	 */
-	public int size() {
+	public static int size() {
 		return map.size();
 	}
 	
@@ -113,7 +111,7 @@ public class LocalCache<T> {
 	 * @author lizhiyong
 	 * @date 2018年3月29日
 	 */
-	public void clear() {
+	public static void clear() {
 		if(null != timer) {
 			timer.cancel();
 		}
@@ -125,7 +123,7 @@ public class LocalCache<T> {
 	 * @author lizhiyong
 	 * @date 2018年3月29日
 	 */
-	class TimeoutTimerTask extends TimerTask {
+	static class TimeoutTimerTask extends TimerTask {
 		private String valueKey;
 		public TimeoutTimerTask(String key) {
 			this.valueKey = key;

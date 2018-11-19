@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- monitorInterval每隔多少秒自动检测配置文件的更改并重新配置自身 -->
+<Configuration status="info" monitorInterval="30">
+
+	<!--全局参数-->
+    <Properties>
+    
+    	<!-- 
+    		表达式说明：
+    		%d  日期时间({yyyy-MM-dd HH:mm:ss.SSS}为格式)
+    		%p  日志级别(-5表示占位5，如%-5p，-表示左对齐)
+    		%t  main/localhost-startStop-1/pool-2-thread-1(进程名)(-21表示占位21)
+    		%c  详细运行目录.文件名({1}为只显示第一级目录即文件名)
+    		%M  运行方法名
+			%L	所在运行文件的代码行
+    		%m  函数运行时日志
+    		%notEmpty  不为空则输出
+    		%X{requestId}}  ThreadContext中为requestId的key对应的value
+    		%n  结束
+    	 -->
+        <!-- <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS}%5p%c{1}:%L - %m%n</Property> -->
+        <!-- <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS}[%-5p][%-21t]%c.%M: %m%notEmpty{ ->%X{requestId}}%n</Property> -->
+        <Property name="pattern">
+        	%d{yyyy-MM-dd HH:mm:ss.SSS}[%p][%t]%c.%M: %m%notEmpty{ -> %X{requestId}}%n
+        </Property>
+        
+        <Property name="logPath" value="logs" />
+        
+    </Properties>
+	
+	<!-- 附加器 -->
+    <Appenders>
+    
+        <!--添加到控制台-->
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+        	<!--只输出INFO及以上级别的信息，onMatch=“ACCEPT”表示，在info级别及以上的日志会接受，onMismatch=“DENY”，表示不匹配的会拒绝-->
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern = "${pattern}"/>
+        </Console>
+        
+        <!--添加到文本-->
+        <!-- <File name="file" fileName="${logPath}/${project.artifactId}-all.log">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern = "${pattern}"/>
+        </File> -->
+        
+        <!-- 同一来源的Appender可以定义多个RollingFile，定义按天存储日志
+			  最新的日志为fileName，超过大小限制的文件转存入filePattern，fileName文件中不包含转存的日志 -->
+        <RollingFile name="rolling_file" fileName="${logPath}/${project.artifactId}.log"
+        			 filePattern="${logPath}/${date:yyyy-MM}/${date:yyyy-MM-dd}/${project.artifactId}-%d{MM-dd-yyyy}_%i.log">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+            	<!-- 按天分interval精确到天，按分钟分interval精确到分钟 -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- 限制文件大小进行转存 -->
+            	<SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <!-- 默认为7，转存同一类型文件最大个数，多了会覆盖之前的 -->
+            <DefaultRolloverStrategy max="100"/>
+        </RollingFile>
+        
+    </Appenders>
+    
+    <!-- 记录器，存入ThreadContext -->
+    <Loggers>
+    
+        <Root level="debug">
+            <AppenderRef ref="console" />
+            <!-- <AppenderRef ref="file" /> -->
+            <AppenderRef ref="rolling_file" />
+        </Root>
+        
+        <Logger name="org.springframework" level="error">  
+        </Logger>
+        <Logger name="org.apache" level="error">  
+        </Logger>
+        <Logger name="com.alibaba" level="error">  
+        </Logger>
+        <Logger name="org.hibernate" level="error">  
+        </Logger>
+        <Logger name="org.mybatis.spring" level="error">  
+        </Logger>
+        <Logger name="log4jdbc.debug" level="error">  
+        </Logger>
+        <Logger name="org.I0Itec" level="error">  
+        </Logger>
+        
+        <Logger name="jdbc.sqlonly" level="off">  
+        </Logger>
+        <Logger name="jdbc.sqltiming" level="info">  
+        </Logger>
+        <Logger name="jdbc.audit" level="off">  
+        </Logger>
+        <Logger name="jdbc.resultset" level="off">  
+        </Logger>
+        <Logger name="jdbc.connection" level="off">  
+        </Logger>
+        
+        <Logger name="com.iexiao.pnsp.PnspApplication" level="off">
+        </Logger>
+        <Logger name="com.iexiao.pnsp" level="info" includeLocation="true" additivity="true">
+        </Logger>  
+        
+    </Loggers>
+    
+</Configuration>

@@ -7,6 +7,8 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * 特殊工具类
  * @author lizhiyong
@@ -84,4 +86,39 @@ public class SpecialUtil {
 		String newStr = str.substring(0,13);
 		return newStr;
 	}
+	
+	/**
+      * 数字不足位数补0
+      * @param str
+      * @param strLength
+      * @param isLeft true左补，false右补
+      * @return
+      */
+     public static String addZeroForNum(String str, int strLength, Boolean isLeft){
+         int strLen = str.length();
+         if (strLen < strLength){
+             while (strLen < strLength){
+                 StringBuffer sb = new StringBuffer();
+                 str = isLeft ? sb.append("0").append(str).toString() : sb.append(str).append("0").toString();
+                 strLen = str.length();
+             }
+         }
+         return str;
+     }
+     
+     /**
+      * 字符串转数字
+      * @author lizhiyong
+      * @date 2018年10月23日
+      * @param str
+      * @return
+      */
+     public static Integer strToInteger(String str) {
+    	 if(StringUtils.isNotBlank(str)) {
+    		 if(StringUtils.isNumeric(str)) {
+    			 return Integer.valueOf(str);
+    		 }
+    	 }
+    	 return 0;
+     }
 }

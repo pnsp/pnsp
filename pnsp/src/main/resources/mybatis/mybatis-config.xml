@@ -2,7 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<settings>
-		<!-- 是否开启缓存 -->
+		<!-- 是否为映射器开启全局缓存 -->
 		<setting name="cacheEnabled" value="false" />
 		<!-- 表字段下划线映射成驼峰的形式 -->
 		<setting name="mapUnderscoreToCamelCase" value="true" />
@@ -11,18 +11,38 @@
 		<!-- 为缓存提高性能 -->
 		<setting name="defaultExecutorType" value="REUSE" />
 		<!-- 事务操作时间,超时关闭事务 -->
-		<setting name="defaultStatementTimeout" value="600" />
+		<setting name="defaultStatementTimeout" value="1000" />
+		<!-- 设置使用log4j2打印查询语句 (防止因Commons Logging存在忽略log4j2)-->
+		<setting name="logImpl" value="LOG4J2" />
+		<setting name="jdbcTypeForNull" value="VARCHAR"/>
 	</settings>
 
 	<!-- 为包名设置别名 -->
 	<typeAliases>
+	
 		<typeAlias type="com.iexiao.pnsp.user.bean.PnspUserT" alias="PnspUserT" />
 		<typeAlias type="com.iexiao.pnsp.user.query.PnspUserTQuery" alias="PnspUserTQuery" />
+		
 		<typeAlias type="com.iexiao.pnsp.base.bean.PnspImageT" alias="PnspImageT" />
 		<typeAlias type="com.iexiao.pnsp.base.query.PnspImageTQuery" alias="PnspImageTQuery" />
+		
+		<typeAlias type="com.iexiao.pnsp.base.bean.PnspOpLogT" alias="PnspOpLogT" />
+		<typeAlias type="com.iexiao.pnsp.base.query.PnspOpLogTQuery" alias="PnspOpLogTQuery" />
+		
+		<typeAlias type="com.iexiao.pnsp.base.bean.PnspTaskCronT" alias="PnspTaskCronT" />
+		<typeAlias type="com.iexiao.pnsp.base.query.PnspTaskCronTQuery" alias="PnspTaskCronTQuery" />
+		
 	</typeAliases>
 
 	<!-- mapper文件路径 -->
 	<!-- <mappers> <mapper resource="com/iexiao/pnsp/user/dao/PnspUserTDao.xml"/> 
 		</mappers> -->
+		
+	<plugins>
+		<!-- mybatis拦截器 -->
+		<!-- <plugin interceptor="com.iexiao.pnsp.interceptor.SqlCostInterceptor" /> -->
+		<plugin interceptor="com.iexiao.pnsp.interceptor.ResultCountLimitInterceptor">
+			<property name="limitCount" value="1000"/>
+		</plugin>
+	</plugins>
 </configuration>
